@@ -1,0 +1,16 @@
+## backend
+- [ ] 附件上传
+- [ ] 根目录启动脚本
+- [ ] docker
+
+
+### frontend
+- [ ] 移动端适配
+- [ ] 多语言
+- [ ] cdn:env
+- [ ] setting.json seo
+- [ ] workflows 前端构建
+- [ ] favicon
+- [ ] 包清理与优化
+- [ ] lint commit
+- [ ] 统计代码 index.html

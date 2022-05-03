@@ -1,0 +1,31 @@
+version: "3"
+
+networks:
+    apibook:
+      driver: bridge
+
+services:
+
+    mongo:
+      image: mongo
+      container_name: apibook-mongo
+      ports:
+        - 27017:27017
+      volumes:
+        - ./database/mongo:/code
+      networks:
+        - apibook
+
+    node:
+      image: node:16.14.2
+      container_name: apibook-node
+      ports:
+        - 14240:14240
+      volumes:
+        - ./backend:/code
+      networks:
+        - apibook
+      links:
+        - mongo
+      tty: true
+
