@@ -22,13 +22,7 @@ npm run dev
 ```
 
 ## Back-End 
+Base on docker
 ```bash 
-# change dir 
-cd backend
-# install the dependencies
-npm install
-# run
-npm run dev
-# open the link in your browser
-# open http://localhost:14240
+docker-compose up -d
 ```

@@ -10,22 +10,22 @@ services:
       image: mongo
       container_name: apibook-mongo
       ports:
-        - 27017:27017
+        - 14241:27017
       volumes:
-        - ./database/mongo:/code
+        - ./database/mongo:/data/db
       networks:
         - apibook
 
     node:
-      image: node:16.14.2
+      build: ./backend
       container_name: apibook-node
       ports:
         - 14240:14240
       volumes:
-        - ./backend:/code
+        - ./backend:/app
       networks:
         - apibook
-      links:
+      depends_on:
         - mongo
       tty: true
 
