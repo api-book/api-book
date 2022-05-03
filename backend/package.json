@@ -1,0 +1,29 @@
+{
+  "name": "api-book-backend",
+  "version": "0.0.1",
+  "description": "powered by hapi",
+  "main": "app.js",
+  "scripts": {
+    "dev": "npx nodemon app.js"
+  },
+  "author": "iRuxu <rx6@qq.com> (https://iruxu.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/hapi": "^20.1.5",
+    "@hapi/inert": "^6.0.4",
+    "@hapi/vision": "^6.1.0",
+    "env2": "^2.2.2",
+    "fs-extra": "^10.0.1",
+    "hapi-swagger": "^14.2.4",
+    "joi": "^17.4.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "mysql2": "^2.3.0",
+    "require-directory": "^2.1.1",
+    "sequelize": "^5.22.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12",
+    "sequelize-cli": "^6.2.0"
+  }
+}

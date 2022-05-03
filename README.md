@@ -1,3 +1,13 @@
+## Env
+### Work
+Front-End http://localhost:16420
+Back-End http://localhost:14240
+
+
+## backend
+1. 附件上传
+
+
 ## frontend
 1. `npm install` 安装依赖
 
