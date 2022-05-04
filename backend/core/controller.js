@@ -1,10 +1,6 @@
 // Basic Controller Extends by controllers/*
 const { Base } = require("./base");
-const { Sequelize, Op } = require("sequelize");
-
-// CODE
 const ERROR_CODES = require("../setting/err_code_map");
-
 class Controller extends Base {
     constructor() {
         super();

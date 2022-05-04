@@ -1,4 +1,4 @@
-FROM node:16.14.2
+FROM node:alpine
 COPY . /app
 WORKDIR /app
 RUN npm install --registry=https://registry.npmmirror.com

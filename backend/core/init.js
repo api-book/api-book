@@ -9,7 +9,7 @@ const init = async () => {
     // Instance
     const server = Hapi.server({
         port: process.env.APP_PORT,
-        host: "localhost",
+        host: "0.0.0.0",
         state: {
             strictHeader: false,
             ignoreErrors: true,

@@ -1,5 +1,3 @@
-// Common
-const lodash = require("lodash");
 
 class Base {
     constructor() {
