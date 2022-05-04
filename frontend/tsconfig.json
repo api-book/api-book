@@ -14,7 +14,8 @@
         "paths": {
             // 用于设置模块名到基于baseUrl的路径映射
             "@/*": ["./src/*"]
-        }
+        },
+        "types": ["@intlify/vite-plugin-vue-i18n/client"]
     },
     "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/service/demo.js"]
 }

@@ -1,10 +1,10 @@
 import { defineConfig, loadEnv } from "vite";
 import vue from "@vitejs/plugin-vue";
+import vueI18n from "@intlify/vite-plugin-vue-i18n";
 import { resolve } from "path";
 
 export default ({ command, mode }) => {
     return defineConfig({
-
         // 🐳:multiple pages
         build: {
             rollupOptions: {
@@ -24,6 +24,9 @@ export default ({ command, mode }) => {
         //         },
         //     },
         // },
+        server: {
+            port: 16240,
+        },
 
         // 📦:CDN
         base: mode == "development" ? "/" : loadEnv(mode, process.cwd()).STATIC_PATH,
@@ -47,6 +50,12 @@ export default ({ command, mode }) => {
         },
 
         // 🍬:loaders
-        plugins: [vue()],
+        plugins: [
+            vue(),
+            vueI18n({
+                include: resolve(__dirname, "./src/locales/**"),
+                compositionOnly: false
+            }),
+        ],
     });
 };
