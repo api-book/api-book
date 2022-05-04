@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HelloWorld from "@/components/HelloWorld.vue";
+import Header from "@/components/Header.vue";
 
 import { provide, reactive, computed } from "vue";
 import { useHead } from "@vueuse/head";
@@ -28,8 +28,7 @@ provide("SEO", SEO);
 </script>
 
 <template>
-    <img alt="Vue logo" src="@/assets/img/logo.png" />
-    <HelloWorld msg="Hello World" />
+    <Header />
     <router-view />
 </template>
 
