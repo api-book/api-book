@@ -11,3 +11,11 @@ export interface Config {
     exportDevOnly: boolean;
     dots: string[];
 }
+
+export interface NavItem {
+    name: string;
+    path: string;
+    title: string;
+    devonly: boolean;
+    group: string;
+}

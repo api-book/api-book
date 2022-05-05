@@ -17,6 +17,7 @@ function getHeader(){
 }
 
 function getNav(){
+    if (isDev) return handleEnv(setting.nav)
     return request.get('/api/nav');
 }
 

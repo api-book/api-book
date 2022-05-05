@@ -1,12 +1,13 @@
 import { defineStore } from "pinia";
-import { getMenu, getConfigs } from "@/service";
-import type { MenuItem, Config } from "./types";
+import { getMenu, getConfigs, getNav } from "@/service";
+import type { MenuItem, Config, NavItem } from "./types";
 
 export const useStore = defineStore('main', {
     state: () => {
         return {
             menu: [] as MenuItem[],
             config: {} as Config,
+            navs: [] as NavItem[],
             activeIndex: 0,
 
             isDev: import.meta.env.DEV,
@@ -40,6 +41,14 @@ export const useStore = defineStore('main', {
                 this.config = {};
                 console.log('loadConfig error:', e);
             }
+        },
+        async loadNav() {
+            try {
+                this.navs = await getNav();
+            } catch (e) {
+                this.navs = [];
+                console.log('loadNav error:', e);
+            }
         }
     },
     getters: {
@@ -48,6 +57,11 @@ export const useStore = defineStore('main', {
         },
         focus(): boolean {
             return this.sideNavShow || this.topMenuShow || this.btnGroupShow || this.dialog;
+        },
+        screenWitdh(): number {
+            return window.innerWidth;
         }
     }
 });
+
+export type MainStore = typeof useStore;

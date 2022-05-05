@@ -17,6 +17,7 @@ export default {
         onMounted(() => {
             loadMenu();
             loadConfig();
+            loadNav();
         });
 
         // computed
@@ -37,9 +38,11 @@ export default {
         const loadMenu = () => {
             store.loadMenu();
         };
-
         const loadConfig = () => {
             store.loadConfig();
+        };
+        const loadNav = () => {
+            store.loadNav();
         };
         return {
             topMenuShow,

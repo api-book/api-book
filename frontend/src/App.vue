@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Header from "@/components/Header.vue";
+import Sidebar from '@/components/Sidebar.vue';
 
 import { provide, reactive, computed } from "vue";
 import { useHead } from "@vueuse/head";
@@ -29,6 +30,7 @@ provide("SEO", SEO);
 
 <template>
     <Header />
+    <Sidebar></Sidebar>
     <router-view />
 </template>
 
