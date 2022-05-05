@@ -8,17 +8,11 @@
 
 <script lang="ts">
 import { useStore } from "@/store/pinia_store";
-import { computed, onMounted } from "vue";
+import { computed } from "vue";
 
 export default {
     setup() {
         const store = useStore();
-
-        onMounted(() => {
-            loadMenu();
-            loadConfig();
-            loadNav();
-        });
 
         // computed
         const topMenuShow = computed(() => {
@@ -34,15 +28,6 @@ export default {
         // methods
         const handleClick = (index: number) => {
             store.activeIndex = index;
-        };
-        const loadMenu = () => {
-            store.loadMenu();
-        };
-        const loadConfig = () => {
-            store.loadConfig();
-        };
-        const loadNav = () => {
-            store.loadNav();
         };
         return {
             topMenuShow,
