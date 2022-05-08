@@ -4,6 +4,7 @@
 - [ ] graphql api
 - [ ] 附件上传
 - [ ] 根目录启动脚本
+- [ ] 根目录可视化启动模式(docker || local)
 
 ### frontend
 - [ ] 移动端适配

@@ -4,7 +4,8 @@
   "description": "powered by hapi",
   "main": "app.js",
   "scripts": {
-    "dev": "npx nodemon app.js"
+    "dev": "npx nodemon app.js",
+    "serve": "pm2 start app.js --watch --ignore-watch=\"node_modules\""
   },
   "author": "iRuxu <rx6@qq.com> (https://iruxu.com/)",
   "license": "MIT",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.12",
+    "pm2": "^5.2.0",
     "sequelize-cli": "^6.2.0"
   }
 }
