@@ -21,7 +21,7 @@
     "nav":[
             {
                 "name":"Javascript",
-                "path":"/",
+                "path":"/javascript",
                 "title":"",
                 "devonly":false,
                 "group":"code"

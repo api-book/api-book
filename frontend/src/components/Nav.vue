@@ -1,38 +1,44 @@
 <template>
     <nav class="c-sidebar-nav">
-        <router-link
+        <a
             v-for="item in navs"
-            :to="item.path"
             :title="item.title"
             :key="item.name"
+            @click="handleClick(item.name)"
+            :class="{ active: item.name === activeName }"
         >
             {{ item.name }}
-        </router-link>
+        </a>
     </nav>
 </template>
 
-<script lang="ts">
-import { computed } from 'vue'
+<script setup lang="ts">
+import { computed, ref } from 'vue'
 import { useStore } from '@/store/pinia_store'
-export default {
-    name: 'Nav',
-    setup() {
-        const store = useStore()
+import { useRoute, useRouter } from 'vue-router'
 
-        const navs = computed(() => {
-            const isDev = store.isDev;
-            let navs = store.navs;
-            if (!isDev) {
-                return navs.fliter((item: { devonly: boolean }) => !item.devonly);
-            }
-            return navs;
-        })
+const store = useStore()
+const route = useRoute()
+const router = useRouter()
+const activeName = ref('')
 
-        return {
-            navs
-        }
+const navs = computed(() => {
+    const isDev = store.isDev;
+    let navs = store.navs;
+    if (!isDev) {
+        return navs.fliter((item: { devonly: boolean }) => !item.devonly);
     }
+    return navs;
+})
+const routeName = computed(() => {
+    return route.name;
+})
+
+const handleClick = (name: string) => {
+    activeName.value = name;
+    router.push({ name: routeName.value, params: { type: name } })
 }
+
 </script>
 
 <style lang="less">
@@ -52,13 +58,14 @@ export default {
         padding: 5px 10px;
         color: @nav-color;
         line-height: 1.8;
+        cursor: pointer;
 
         &:hover {
             font-weight: bold;
         }
     }
 
-    .router-link-exact-active {
+    .active {
         font-weight: bold;
         background-color: #fff;
         border-right: 1px solid #fff;

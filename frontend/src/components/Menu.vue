@@ -6,36 +6,26 @@
     </ul>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { useStore } from "@/store/pinia_store";
 import { computed } from "vue";
 
-export default {
-    setup() {
-        const store = useStore();
+const store = useStore();
 
-        // computed
-        const topMenuShow = computed(() => {
-            return store.topMenuShow;
-        });
-        const menu = computed(() => {
-            return store.menu;
-        });
-        const activeIndex = computed(() => {
-            return store.activeIndex;
-        });
+// computed
+const topMenuShow = computed(() => {
+    return store.topMenuShow;
+});
+const menu = computed(() => {
+    return store.menu;
+});
+const activeIndex = computed(() => {
+    return store.activeIndex;
+});
 
-        // methods
-        const handleClick = (index: number) => {
-            store.activeIndex = index;
-        };
-        return {
-            topMenuShow,
-            menu,
-            activeIndex,
-            handleClick,
-        };
-    },
+// methods
+const handleClick = (index: number) => {
+    store.activeIndex = index;
 };
 </script>
 

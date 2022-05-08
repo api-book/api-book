@@ -2,10 +2,12 @@
 import { createRouter, createWebHistory, createWebHashHistory } from "vue-router";
 
 // 2.Components
-const Home = () => import("../views/Home.vue");
+const Notebook = () => import("../views/Notebook.vue");
 
 // 3.Routes
-const routes = [{ path: "/", component: Home }];
+const routes = [
+    { path: "/:type?", component: Notebook, name: 'home' },
+];
 
 // 4.Build An Instance
 const router = createRouter({
