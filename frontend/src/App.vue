@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Header from "@/components/Header.vue";
-import Sidebar from '@/components/Sidebar.vue';
+import Header from "./components/Header.vue";
+import Sidebar from './components/Sidebar.vue';
 
 import { onMounted, watch, computed } from "vue";
-import { useStore } from "@/store/pinia_store";
-import type { NavItem } from '@/store/types'
+import { useStore } from "./store/pinia_store";
+import type { NavItem } from './store/types'
 import router from "./router";
 
 const store = useStore();

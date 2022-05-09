@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import {useStore} from "@/store/pinia_store";
+import {useStore} from "../store/pinia_store";
 import {computed} from "vue";
 import { useRoute } from "vue-router";
 

@@ -10,9 +10,9 @@
 </template>
 
 <script lang="ts">
-import Nav from '@/components/Nav.vue';
+import Nav from '../components/Nav.vue';
 import { computed } from 'vue';
-import { useStore } from '@/store/pinia_store';
+import { useStore } from '../store/pinia_store';
 export default {
     components: {
         Nav

@@ -1,4 +1,4 @@
-import request from "@/utils/request";
+import request from "../utils/request";
 
 // TODO: 完善接口
 import setting from '../../../database/setting.json';

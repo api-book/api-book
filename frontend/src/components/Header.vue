@@ -27,12 +27,12 @@
 </template>
 
 <script lang="ts">
-import Menu from "@/components/Menu.vue";
-import Button from '@/components/Button.vue';
-import Github from '@/components/Github.vue';
+import Menu from "./components/Menu.vue";
+import Button from './components/Button.vue';
+import Github from './components/Github.vue';
 
 import { computed } from "vue";
-import { useStore } from "@/store/pinia_store";
+import { useStore } from "../store/pinia_store";
 import { useI18n } from "vue-i18n";
 
 export default {
