@@ -19,6 +19,7 @@
     "joi": "^17.4.2",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
+    "mongoose": "^6.3.3",
     "mysql2": "^2.3.0",
     "require-directory": "^2.1.1",
     "sequelize": "^5.22.4"

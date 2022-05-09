@@ -6,8 +6,11 @@
 You have two ways to develop.
 
 ### Localhost
-1. Install Node.js@14+ & MongoDB
-2. Change Dir to frontend & backend ,then run command
+#### Prerequisites
++ Node.js@14+
++ MongoDB
+#### Start server
+Change Dir to frontend & backend ,then run command
 ```bash
 npm run dev
 ```
@@ -16,7 +19,8 @@ npm run dev
 + frontend `localhost:16240`
 
 ### Docker
-1. Install docker
+#### Prerequisites
++ docker
 2. Build or start docker container
 ```bash 
 # first time
