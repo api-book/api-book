@@ -33,7 +33,9 @@ export default ({ command, mode }) => {
 
         // 🌸:alias @ for ./src
         resolve: {
-            alias: [{ find: "@", replacement: resolve(__dirname, "./src") }],
+            alias: {
+                '/@/': resolve(__dirname, './src')
+            },
         },
 
         // ❄️:css mixins & global vars

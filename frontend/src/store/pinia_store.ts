@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { getMenu, getConfigs, getNav } from "@/service";
+import { getMenu, getConfigs, getNav } from "../service";
 import type { MenuItem, Config, NavItem } from "./types";
 
 export const useStore = defineStore('main', {
