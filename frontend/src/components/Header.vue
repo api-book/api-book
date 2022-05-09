@@ -151,7 +151,7 @@ export default {
         height: 68px;
         float: left;
         display: block;
-        background: url('@/assets/img/logo.png') no-repeat center center;
+        background: url('../assets/img/logo.png') no-repeat center center;
         background-size: contain;
         margin-top: -15px;
         margin-left: 5px;

@@ -37,7 +37,6 @@ console.log(store.name)
 </template>
 
 <script lang="ts">
-// import { getBox } from "@/service/demo";
 export default {
     name: "HelloWorld",
     props: [],

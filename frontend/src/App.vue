@@ -24,7 +24,7 @@ watch(nav, (val: NavItem[]) => {
             await router.addRoute({
                 path: item.path,
                 name: item.name.toLowerCase(),
-                component: () => import('@/views/NoteBook.vue')
+                component: () => import('./views/NoteBook.vue')
             })
         })
         console.log(val)
@@ -40,5 +40,5 @@ watch(nav, (val: NavItem[]) => {
 </template>
 
 <style lang="less">
-@import "@/assets/css/app.less";
+@import "../assets/css/app.less";
 </style>
