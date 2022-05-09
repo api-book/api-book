@@ -24,9 +24,7 @@ watch(nav, (val: NavItem[]) => {
             await router.addRoute({
                 path: item.path,
                 name: item.name.toLowerCase(),
-                component: () => {
-                    return nav.name === 'Home' ? import('@/views/Home.vue') : import('@/views/NoteBook.vue')
-                }
+                component: () => import('@/views/NoteBook.vue')
             })
         })
         console.log(val)
